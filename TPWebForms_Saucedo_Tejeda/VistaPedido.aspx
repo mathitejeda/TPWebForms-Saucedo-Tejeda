@@ -95,7 +95,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <h3>Cantidad</h3>
+                    <hr />
+                    <asp:TextBox ID="tbxCantidad"  runat="server"></asp:TextBox>
+                    <h3>Notas adicionales</h3>
+                    <hr />
+                    <asp:TextBox ID="tbxNotas" CssClass="form-control" rows="3" runat="server"></asp:TextBox>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
