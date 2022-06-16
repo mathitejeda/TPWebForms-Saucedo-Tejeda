@@ -49,6 +49,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-link active" runat="server" href="~/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" runat="server" href="~/Usuarios">Usuarios</a>
       <a class="nav-link" runat="server" href="~/About">Acerca de</a>
       <a class="nav-link" runat="server" href="~/Contact">Contacto</a>
     </div>
