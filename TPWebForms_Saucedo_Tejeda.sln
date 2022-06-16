@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPWebForms_Saucedo_Tejeda", "TPWebForms_Saucedo_Tejeda\TPWebForms_Saucedo_Tejeda.csproj", "{9E4260FD-8395-4874-AB23-798829CF3ADF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E67C636C-316C-4DF7-BAB9-D3815A079E3D} = {E67C636C-316C-4DF7-BAB9-D3815A079E3D}
+		{F7AC0EFE-B0B2-47DC-8893-EBE4FAF04216} = {F7AC0EFE-B0B2-47DC-8893-EBE4FAF04216}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{E67C636C-316C-4DF7-BAB9-D3815A079E3D}"
 EndProject
