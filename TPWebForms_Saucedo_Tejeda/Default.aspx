@@ -2,41 +2,71 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+	<h1>Resto</h1>
+	<hr>
+	<h2>Mesas</h2>
+	<br>
+<!--Vista de mesas-->
+	<div class="row row-cols-1 row-cols-md-3">
+		<div class="col mb-4">
+			<div class="card text-white bg-success mb-3">
+				<div class="card-header">Nro de mesa</div>
+				<div class="card-body">
+					<h5 class="card-title">Disponible</h5>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+						additional content. This card has even longer content than the first to show that equal height
+						action.</p>
+					<button type="button" class="btn btn-light"data-toggle="modal" data-target="#exampleModal">Light</button>
+				</div>
+			</div>
+		</div>
+		<div class="col mb-4">
+			<div class="card text-white bg-success mb-3">
+				<div class="card-header">Nro de mesa</div>
+				<div class="card-body">
+					<h5 class="card-title">Disponible</h5>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+						additional content. This card has even longer content than the first to show that equal height
+						action.</p>
+					<button type="button" class="btn btn-light"data-toggle="modal" data-target="#exampleModal">Light</button>
+				</div>
+			</div>
+		</div>
+		<div class="col mb-4">
+			<div class="card text-white bg-danger mb-3">
+				<div class="card-header">Nro de mesa</div>
+				<div class="card-body">
+					<h5 class="card-title">Ocupada</h5>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+						additional content. This card has even longer content than the first to show that equal height
+						action.</p>
+					
+					<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">Light</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Numero de mesa</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  Aca iria el pedido y si no un boton para levantar pedido
+		  <a type="button" class="btn btn-light" href="VistaPedido">Administrar pedido</a>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-primary">Guardar</button>
+		</div>
+	  </div>
+	</div>
+  </div>
 
 </asp:Content>

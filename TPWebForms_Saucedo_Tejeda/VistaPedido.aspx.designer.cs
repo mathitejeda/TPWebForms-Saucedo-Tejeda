@@ -11,7 +11,7 @@ namespace TPWebForms_Saucedo_Tejeda
 {
 
 
-    public partial class About
+    public partial class VistaPedido
     {
     }
 }
