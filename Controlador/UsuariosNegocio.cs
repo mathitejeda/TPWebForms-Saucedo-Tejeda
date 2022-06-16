@@ -7,7 +7,7 @@ using Modelo;
 
 namespace Controlador
 {
-    class UsuariosNegocio
+    public class UsuariosNegocio
     {
         public List<Usuarios> listar()
         {

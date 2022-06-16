@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class Mesas
+    public class Mesas
     {
         public int ID { get; set; }
         public bool Ocupada { get; set; }
