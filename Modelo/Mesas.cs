@@ -11,5 +11,6 @@ namespace Modelo
         public int ID { get; set; }
         public bool Ocupada { get; set; }
         public int IDMozo { get; set; }
+        public int test { get; set; }
     }
 }
