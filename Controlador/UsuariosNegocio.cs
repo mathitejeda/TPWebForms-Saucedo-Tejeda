@@ -9,16 +9,16 @@ namespace Controlador
 {
     public class UsuariosNegocio
     {
-        public List<Usuarios> listar()
+        public List<Usuario> listar()
         {
-            List<Usuarios> lista = new List<Usuarios>();
+            List<Usuario> lista = new List<Usuario>();
             AccesoDatos datos = new AccesoDatos();
             datos.SetConsulta("SELECT u.ID, u.IDTipo, u.Nombre, u.Apellido, u.usuario, u.cotraseña, u., c.Descripcion Categoria from " +
                 "Usuarios AS u");
             datos.EjecutarLectura();
             while (datos.Lector.Read())
             {
-                Usuarios aux = new Usuarios();
+                Usuario aux = new Usuario();
                 aux.ID = (int)datos.Lector["ID"];
                 aux.IDTipo = (int)datos.Lector["iDTipo"];
                 aux.Nombre = (string)datos.Lector["Nombre"];
