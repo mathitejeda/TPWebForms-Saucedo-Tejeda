@@ -10,7 +10,7 @@ create table TipoUsuarios(
 )
 
 Create Table Usuarios(
-    ID smallint not null primary key identity (1, 1),
+    ID int not null primary key identity (1, 1),
 	IDTipo smallint not null foreign key references TipoUsuarios(ID),
 	Nombre varchar(50) not null,
 	Apellidos varchar(50) not  null,
@@ -23,7 +23,7 @@ GO
 create Table Mesas(
     ID bigint not null primary key identity (1, 1),
     Ocupada bit not null default 0,
-	IDMozo smallint foreign key references Usuarios(ID),
+	IDMozo int foreign key references Usuarios(ID),
 )
 GO
 
