@@ -9,9 +9,9 @@ namespace Controlador
 {
     public class MesaNegocio
     {
-        public List<MesaNegocio> listar()
+        public List<Mesa> listar()
         {
-            List<MesaNegocio> listaMesas = new List<MesaNegocio>();
+            List<Mesa> listaMesas = new List<Mesa>();
             List<Mesa> lista = new List<Mesa>();
             AccesoDatos datos = new AccesoDatos();
             datos.SetConsulta
@@ -23,7 +23,7 @@ namespace Controlador
             while (datos.Lector.Read())
             {
                 Mesa aux = new Mesa();
-                aux.ID = (int)datos.Lector["ID"];
+                aux.ID = (long)datos.Lector["ID"];
                 aux.Ocupada = (bool)datos.Lector["Ocupada"];
                 aux.IDMozo = (int)datos.Lector["IDMozo"];
                 lista.Add(aux);

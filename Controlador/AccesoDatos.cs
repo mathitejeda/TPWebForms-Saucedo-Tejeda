@@ -20,7 +20,7 @@ namespace Controlador
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection();
+            conexion = new SqlConnection("data source = .\\SQLEXPRESS; initial catalog = restaurante;integrated security = sspi;");
             comando = new SqlCommand();
         }
 
