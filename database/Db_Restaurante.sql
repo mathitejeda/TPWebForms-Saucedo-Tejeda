@@ -1,7 +1,10 @@
 create database Restaurante
 
+Go
+
 use Restaurante
 
+GO
 
 create table TipoUsuarios(
  ID smallint not null primary key identity (1, 1),
