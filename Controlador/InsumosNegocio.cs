@@ -29,8 +29,66 @@ namespace Controlador
             }
             return listaProductos;
 
-
-            
         }
+
+        public void agregar(Insumos insumo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetConsulta("Insert into insumos values(@nombre,@precio,@stock,@IDTipo)");
+                datos.setearParametro("@nombre", insumo.Nombre);
+                datos.setearParametro("@precio", insumo.Precio);
+                datos.setearParametro("@stock", insumo.Stock);
+                datos.setearParametro("@IDTipo", insumo.Tipo);
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
+        public void eliminar(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.SetConsulta("delete from Insumos where Id = @id");
+                datos.setearParametro("@id", id);
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void modificar(Insumos modificar)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetConsulta("update Insumo set nombre = @nombre, precio = @precio, stock = @stock, tipo = @IDTipo");
+                datos.setearParametro("@nombre", modificar.Nombre);
+                datos.setearParametro("@precio", modificar.Precio);
+                datos.setearParametro("@stock", modificar.Stock);
+                datos.setearParametro("@IDTipo", modificar.Tipo);
+
+                datos.EjecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }
