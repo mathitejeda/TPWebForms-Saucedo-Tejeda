@@ -24,7 +24,7 @@ GO
 
 
 create Table Mesas(
-    ID bigint not null primary key identity (1, 1),
+    ID int not null primary key identity (1, 1),
     Ocupada bit not null default 0,
 	IDMozo int foreign key references Usuarios(ID),
 )
@@ -37,15 +37,15 @@ Nombre varchar(50)
 Go
 
 create table Insumos(
-ID bigint not null primary key identity (1, 1),
+ID int not null primary key identity (1, 1),
 Nombre varchar(50) not null,
 precio money not null,
-stock bigint not null,
+stock int not null,
 IDTipo smallint Foreign key references Tipo(ID)
 )
 Go
 
 Create Table Insumos_x_Mesa(
-    IDMesa bigint not null foreign key references Mesas(ID),
-    IDInsumo bigint not null foreign key references Insumos(ID),
+    IDMesa int not null foreign key references Mesas(ID),
+    IDInsumo int not null foreign key references Insumos(ID),
 )
