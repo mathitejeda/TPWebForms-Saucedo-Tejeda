@@ -23,7 +23,7 @@ namespace Controlador
             while (datos.Lector.Read())
             {
                 Mesa aux = new Mesa();
-                aux.ID = (long)datos.Lector["ID"];
+                aux.ID = (int)datos.Lector["ID"];
                 aux.Ocupada = (bool)datos.Lector["Ocupada"];
                 aux.IDMozo = (int)datos.Lector["IDMozo"];
                 lista.Add(aux);
