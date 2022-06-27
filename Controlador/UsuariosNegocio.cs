@@ -13,8 +13,7 @@ namespace Controlador
         {
             List<Usuario> lista = new List<Usuario>();
             AccesoDatos datos = new AccesoDatos();
-            datos.SetConsulta("SELECT u.ID, u.IDTipo, u.Nombre, u.Apellido, u.usuario, u.cotraseña, u., c.Descripcion Categoria from " +
-                "Usuarios AS u");
+            datos.SetConsulta("SELECT u.ID, u.IDTipo, u.Nombre, u.Apellidos, u.usuario, u.Contrasenia from Usuarios AS u");
             datos.EjecutarLectura();
             while (datos.Lector.Read())
             {
