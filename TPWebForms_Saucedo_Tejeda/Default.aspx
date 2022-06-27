@@ -18,11 +18,9 @@
                 <div class="card-body">
                     <h5 class="card-title"><%#Eval("Ocupada").Equals(true)? "Ocupada":"Disponible"%></h5>
                     <p class="card-text">
-                        This is a wider card with supporting text below as a natural lead-in to
-						additional content. This card has even longer content than the first to show that equal height
-						action.
+                            Atendida por: <%#Eval("Mozo.Nombre")%>, <%#Eval("Mozo.Apellidos") %>
                     </p>
-                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">Light</button>
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalmesa">Administrar</button>
                 </div>
             </div>
         </div>
@@ -30,19 +28,43 @@
         </asp:Repeater>
     </div>
 
+    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#gestionmesas">Gestionar Mesas</button>
+
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalMesa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Numero de mesa</h5>
+                    <h5 class="modal-title"">Numero de mesa</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     Aca iria el pedido y si no un boton para levantar pedido
-		  <a type="button" class="btn btn-light" href="VistaPedido">Administrar pedido</a>
+		  <a type="button" class="btn btn-dark" href="VistaPedido">Administrar pedido</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <div class="modal fade" id="gestionmesas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Numero de mesa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Nueva mesa 
+                    <asp:DropDownList id="listaUsuarios" runat="server"></asp:DropDownList>
+                    <asp:Button runat="server" OnClick="agregarMesa" CssClass="btn btn-dark" Text="+"/>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

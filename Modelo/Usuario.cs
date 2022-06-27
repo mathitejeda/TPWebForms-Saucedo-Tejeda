@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Modelo
+﻿namespace Modelo
 {
     public class Usuario
     {
@@ -14,5 +8,13 @@ namespace Modelo
         public string usuario { get; set; }
         public string contrasenia { get; set; }
         public int IDTipo { get; set; }
+
+        public Usuario() { }
+        public Usuario(int ID, string Nombre, string Apellidos)
+        {
+            this.ID = ID;
+            this.Nombre = Nombre;
+            this.Apellidos = Apellidos;
+        }
     }
 }

@@ -1,9 +1,5 @@
-﻿using System;
+﻿using Modelo;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Modelo;
 
 namespace Controlador
 {
@@ -15,19 +11,35 @@ namespace Controlador
             AccesoDatos datos = new AccesoDatos();
             datos.SetConsulta
                 (
-                    "select M.ID, M.Ocupada, M.idmozo " +
-                    "from mesas as M"
+                    "select m.ID, m.Ocupada, U.ID, U.Nombre, U.Apellidos " +
+                    "from mesas as m " +
+                    "join usuarios as U on m.IDmozo=U.ID"
                 );
             datos.EjecutarLectura();
             while (datos.Lector.Read())
             {
                 Mesa aux = new Mesa();
-                aux.ID = (int)datos.Lector["ID"];
-                aux.Ocupada = (bool)datos.Lector["Ocupada"];
-                aux.IDMozo = (int)datos.Lector["IDMozo"];
+                aux.ID = datos.Lector.GetInt32(0);
+                aux.Ocupada = datos.Lector.GetBoolean(1);
+                aux.Mozo = new Usuario(datos.Lector.GetInt32(2), datos.Lector.GetString(3), datos.Lector.GetString(4));
                 listaMesas.Add(aux);
             }
             return listaMesas;
+        }
+        public void agregar(Usuario mozo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetConsulta("insert into mesas(IDMozo) values(@id)");
+                datos.setearParametro("@id", mozo.ID);
+                datos.EjecutarAccion();
+            }
+            catch (System.Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }
