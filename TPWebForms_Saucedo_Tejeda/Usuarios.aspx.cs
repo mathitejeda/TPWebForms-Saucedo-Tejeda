@@ -11,7 +11,7 @@ namespace TPWebForms_Saucedo_Tejeda
 {
     public partial class Usuarios : System.Web.UI.Page
     {
-       public List<Usuario> users;
+        public List<Usuario> users;
         protected void Page_Load(object sender, EventArgs e)
         {
             UsuariosNegocio negocio = new UsuariosNegocio();
@@ -26,14 +26,77 @@ namespace TPWebForms_Saucedo_Tejeda
             Usuario nuevo = new Usuario();
             UsuariosNegocio agregar = new UsuariosNegocio();
 
-            nuevo.Nombre = txtNombre.Text;
-            nuevo.IDTipo = 1;
-            nuevo.Apellidos = "Saucedo";
-            nuevo.usuario = "Nah";
-            nuevo.contrasenia = "12345";
-            agregar.agregar(nuevo);
+
+          
+                try
+                {
+                    nuevo.Nombre = txtNombre.Text;
+                    nuevo.Apellidos = txtApellido.Text;
+                    nuevo.IDTipo = 1;
+                    nuevo.usuario = txtUsuario.Text;
+                    nuevo.contrasenia = txtContrasenia.Text;
+                    agregar.agregar(nuevo);
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+
+
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            UsuariosNegocio eliminar = new UsuariosNegocio();
+            eliminar.eliminar(Convert.ToInt32(txteliminar.Text));
+        }
+
+
+        protected void btnbuscar_Click(object sender, EventArgs e)
+        {
+            Usuario user = new Usuario();
+            UsuariosNegocio negocio = new UsuariosNegocio();
+            user = negocio.Seleccionar(Convert.ToInt32(txtmodificar.Text));
+            txtname.Text = user.Nombre;
+            txtsecond.Text = user.Apellidos;
+            txtuser.Text = user.usuario;
+            txtpass.Text = user.contrasenia;
+            txttipe.Text = Convert.ToString(user.IDTipo);
+
+        }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+
+
+            Usuario user = new Usuario();
+            UsuariosNegocio negocio = new UsuariosNegocio();
+
+
+            try
+            {
+            user.ID = Convert.ToInt32(txtmodificar.Text);
+            user.Nombre = txtname.Text;
+            user.Apellidos = txtsecond.Text;
+            user.usuario = txtuser.Text;
+            user.contrasenia = txtpass.Text;
+            user.IDTipo = Convert.ToInt32(txttipe.Text);
+            negocio.modificar(user);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
 
             
+
+
+
         }
+
     }
 }
