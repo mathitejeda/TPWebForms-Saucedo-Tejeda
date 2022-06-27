@@ -19,11 +19,11 @@ namespace Controlador
             {
                 Usuario aux = new Usuario();
                 aux.ID = (int)datos.Lector["ID"];
-                aux.IDTipo = (int)datos.Lector["iDTipo"];
+                aux.IDTipo = (Int16)datos.Lector["iDTipo"];
                 aux.Nombre = (string)datos.Lector["Nombre"];
-                aux.Apellidos = (string)datos.Lector["Apellido"];
+                aux.Apellidos = (string)datos.Lector["Apellidos"];
                 aux.usuario = (string)datos.Lector["Usuario"];
-                aux.contrasenia = (string)datos.Lector["Contraseña"];
+                aux.contrasenia = (string)datos.Lector["Contrasenia"];
                 lista.Add(aux);
             }
             return lista;
@@ -57,7 +57,7 @@ namespace Controlador
                 datos.setearParametro("IDTipo", usuario.IDTipo);
                 datos.setearParametro("@nombre", usuario.Nombre);
                 datos.setearParametro("@Apellido", usuario.Apellidos);
-                datos.setearParametro("@usuarios", usuario.usuario);
+                datos.setearParametro("@usuario", usuario.usuario);
                 datos.setearParametro("@contrasenia", usuario.contrasenia);
                 datos.EjecutarAccion();
             }
