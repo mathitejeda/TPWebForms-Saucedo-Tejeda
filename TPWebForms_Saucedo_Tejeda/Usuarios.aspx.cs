@@ -51,11 +51,15 @@ namespace TPWebForms_Saucedo_Tejeda
         {
             UsuariosNegocio eliminar = new UsuariosNegocio();
             eliminar.eliminar(Convert.ToInt32(txteliminar.Text));
+            
+
         }
 
 
         protected void btnbuscar_Click(object sender, EventArgs e)
         {
+            try
+            {
             Usuario user = new Usuario();
             UsuariosNegocio negocio = new UsuariosNegocio();
             user = negocio.Seleccionar(Convert.ToInt32(txtmodificar.Text));
@@ -64,6 +68,13 @@ namespace TPWebForms_Saucedo_Tejeda
             txtuser.Text = user.usuario;
             txtpass.Text = user.contrasenia;
             txttipe.Text = Convert.ToString(user.IDTipo);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
 
         }
 
@@ -84,6 +95,7 @@ namespace TPWebForms_Saucedo_Tejeda
             user.contrasenia = txtpass.Text;
             user.IDTipo = Convert.ToInt32(txttipe.Text);
             negocio.modificar(user);
+                user = null;
 
             }
             catch (Exception ex)
@@ -97,6 +109,7 @@ namespace TPWebForms_Saucedo_Tejeda
 
 
         }
+
 
     }
 }

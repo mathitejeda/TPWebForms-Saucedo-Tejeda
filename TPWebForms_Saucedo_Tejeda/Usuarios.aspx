@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Usuarios" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="TPWebForms_Saucedo_Tejeda.Usuarios" %>
 
- 
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Usuarios</h1>
     <hr>
@@ -68,6 +68,7 @@
           <div>
           </div>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
           <asp:Button ID="btnEliminar" Text="Confirmar" CssClass="btn btn-primary" runat="server" OnClick="btnEliminar_Click" />
       </div>
     </div>
@@ -84,6 +85,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+        <asp:UpdatePanel runat="server">
+            <ContentTemplate>
       <div class="modal-body">
               <h6>ID</h6>
               <asp:TextBox ID="txtmodificar" runat="server" />
@@ -101,9 +104,13 @@
       <div class="modal-footer">
           <div>
           </div>   
+          
           <asp:Button ID="btnbuscar" Text="Buscar" CssClass="btn btn-success" runat="server" OnClick="btnbuscar_Click" />
+
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           <asp:Button ID="btnModificar" Text="Confirmar" CssClass="btn btn-primary" runat="server" OnClick="btnModificar_Click"  />
+            </ContentTemplate>
+        </asp:UpdatePanel>
           
       </div>
     </div>

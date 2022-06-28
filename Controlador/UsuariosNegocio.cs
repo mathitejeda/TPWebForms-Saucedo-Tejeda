@@ -39,10 +39,10 @@ namespace Controlador
                 datos.setearParametro("@iD", iD);
                 datos.EjecutarAccion();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
 
 
@@ -123,8 +123,8 @@ namespace Controlador
 
             }
 
-      
                 return dev;
+      
 
         }
 
