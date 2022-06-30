@@ -15,21 +15,39 @@ namespace TPWebForms_Saucedo_Tejeda
     {
 
         /// <summary>
-        /// Control tbxCantidad.
+        /// Control DdBebidas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxCantidad;
+        protected global::System.Web.UI.WebControls.DropDownList DdBebidas;
 
         /// <summary>
-        /// Control tbxNotas.
+        /// Control DpEntradas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxNotas;
+        protected global::System.Web.UI.WebControls.DropDownList DpEntradas;
+
+        /// <summary>
+        /// Control DpComida.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DpComida;
+
+        /// <summary>
+        /// Control DpPostre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DpPostre;
     }
 }

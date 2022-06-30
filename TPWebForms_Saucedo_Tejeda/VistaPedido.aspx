@@ -13,10 +13,9 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Bebidas</h5>
                     <p class="card-text">
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+                        <asp:DropDownList ID="DdBebidas" runat="server"> </asp:DropDownList>
                     </p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
@@ -35,8 +34,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+<asp:DropDownList ID="DpEntradas" runat="server"> </asp:DropDownList>
                     </p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
@@ -55,8 +53,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+<asp:DropDownList ID="DpComida" runat="server"> </asp:DropDownList>
                     </p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
@@ -75,8 +72,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+<asp:DropDownList ID="DpPostre" runat="server"> </asp:DropDownList>
                     </p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
@@ -85,29 +81,6 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <h3>Cantidad</h3>
-                    <hr />
-                    <asp:TextBox ID="tbxCantidad"  runat="server"></asp:TextBox>
-                    <h3>Notas adicionales</h3>
-                    <hr />
-                    <asp:TextBox ID="tbxNotas" CssClass="form-control" rows="3" runat="server"></asp:TextBox>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </asp:Content>
 
