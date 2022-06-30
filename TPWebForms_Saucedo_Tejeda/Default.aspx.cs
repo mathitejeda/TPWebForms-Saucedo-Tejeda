@@ -18,7 +18,8 @@ namespace TPWebForms_Saucedo_Tejeda
             {
                 mesas = mesaNegocio.listar();
                 Session.Add("listaMesas", mesas);
-                //usuarios = usuariosNegocio.listar();
+                usuarios = usuariosNegocio.listar();
+                Session.Add("usuarios", usuarios);
             }
             catch (Exception ex)
             {
@@ -27,25 +28,30 @@ namespace TPWebForms_Saucedo_Tejeda
             }
             if (!IsPostBack)
             {
-
-            }
             cartasMesa.DataSource = mesas;
             cartasMesa.DataBind();
-            listaUsuarios.DataSource = usuarios;
-            listaUsuarios.DataBind();
-        }
+            ddlUsuarios.DataSource = usuarios;
+            ddlUsuarios.DataValueField = "ID";
+            ddlUsuarios.DataTextField = "Nombre";
+            ddlUsuarios.DataBind();
+            }
 
-        protected void agregarMesa(object sender, EventArgs e)
+        }
+        protected void btnAgregar_Click(object sender, EventArgs e)
         {
             MesaNegocio mesaNegocio = new MesaNegocio();
             try
             {
-                //todo: sacar el hardcode, la idea es que se use la lista de usuarios
-                mesaNegocio.agregar(mesas[0].Mozo);
+                Mesa nueva = new Mesa();
+                int idMozo = Convert.ToInt32(ddlUsuarios.SelectedValue);
+                List<Usuario>aux = (List<Usuario>)Session["usuarios"];
+                int posMozo = aux.FindIndex( x => x.ID.Equals(idMozo));
+                nueva.Mozo = aux[posMozo];
+                mesaNegocio.agregar(nueva);
+                Response.Redirect("default.aspx");
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

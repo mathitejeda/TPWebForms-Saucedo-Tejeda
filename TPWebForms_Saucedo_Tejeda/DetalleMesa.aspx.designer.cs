@@ -11,34 +11,34 @@ namespace TPWebForms_Saucedo_Tejeda
 {
 
 
-    public partial class _Default
+    public partial class DetalleMesa
     {
 
         /// <summary>
-        /// Control cartasMesa.
+        /// Control tituloMesa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater cartasMesa;
+        protected global::System.Web.UI.WebControls.Label tituloMesa;
 
         /// <summary>
-        /// Control ddlUsuarios.
+        /// Control tbxMesero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUsuarios;
+        protected global::System.Web.UI.WebControls.TextBox tbxMesero;
 
         /// <summary>
-        /// Control btnAgregar.
+        /// Control tbxEstado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregar;
+        protected global::System.Web.UI.WebControls.TextBox tbxEstado;
     }
 }
