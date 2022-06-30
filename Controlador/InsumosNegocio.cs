@@ -21,9 +21,9 @@ namespace Controlador
                 Insumos aux = new Insumos();
                 aux.ID = (int)datos.Lector["ID"];
                 aux.Nombre = (string)datos.Lector["Nombre"];
-                aux.Precio = (int)datos.Lector["Precio"];
+                aux.Precio = (decimal)datos.Lector["Precio"];
                 aux.Stock = (int)datos.Lector["Stock"];
-                aux.Tipo = (int)datos.Lector["IDTipo"];
+                aux.Tipo = (Int16)datos.Lector["IDTipo"];
                 lista.Add(aux);
 
             }
