@@ -7,11 +7,11 @@ using Modelo;
 
 namespace Controlador
 {
-    class InsumosNegocio
+    public class InsumosNegocio
     {
-        public List<InsumosNegocio> listar()
+        public List<Insumos> listar()
         {
-            List<InsumosNegocio> listaProductos = new List<InsumosNegocio>();
+           
             List<Insumos> lista = new List<Insumos>();
             AccesoDatos datos = new AccesoDatos();
             datos.SetConsulta("Select I.ID, I.nombre, I.PRECIO, I.STOCK, I.IDTIPO FROM INSUMOS AS I");
@@ -23,11 +23,11 @@ namespace Controlador
                 aux.Nombre = (string)datos.Lector["Nombre"];
                 aux.Precio = (int)datos.Lector["Precio"];
                 aux.Stock = (int)datos.Lector["Stock"];
-                aux.Stock = (int)datos.Lector["IDTipo"];
+                aux.Tipo = (int)datos.Lector["IDTipo"];
                 lista.Add(aux);
 
             }
-            return listaProductos;
+            return lista;
 
         }
 
