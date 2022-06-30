@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class Pedido
+    public class Pedido
     {
+        public int ID { get; set; }
+        public List<Insumos> { get; set; }
+        public decimal total { get; set; }
+        public bool estado { get; set; }
     }
 }

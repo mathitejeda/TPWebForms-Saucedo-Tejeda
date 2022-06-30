@@ -12,5 +12,6 @@ namespace Modelo
         public bool Ocupada { get; set; }
         public int IDMozo { get; set; }
         public Usuario Mozo { get; set; }
+        public Pedido pedido { get;set; }
     }
 }
