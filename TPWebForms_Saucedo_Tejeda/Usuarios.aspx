@@ -4,7 +4,8 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Usuarios</h1>
     <hr>
-    <asp:GridView ID="dgvUsuarios" CssClass="table" runat="server">
+    <asp:GridView ID="dgvUsuarios" CssClass="table" runat="server" >
+   
     </asp:GridView>
 
     <!-- Button trigger modal (botones)-->
@@ -30,13 +31,13 @@
       </div>
       <div class="modal-body">
               <h6>Nombre</h6>
-              <asp:TextBox ID="txtNombre" runat="server" />
+              <asp:TextBox ID="txtNombre" runat="server"  />
           <h6>Apellido</h6>
           <asp:TextBox ID="txtApellido" runat="server" />
           <h6>Usuario</h6>
           <asp:TextBox ID="txtUsuario" runat="server" />
           <h6>Contrasenia</h6>
-          <asp:TextBox ID="txtContrasenia" runat="server" />
+          <asp:TextBox ID="txtContrasenia" runat="server" TextMode="Password" />
          <h6>Tipo</h6>
           <asp:TextBox ID="txtTipo" runat="server" />
       </div>
@@ -115,7 +116,7 @@
       </div>
     </div>
   </div>
-</div>
+
 
 
 </asp:Content>

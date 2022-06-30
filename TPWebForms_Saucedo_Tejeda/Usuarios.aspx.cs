@@ -51,7 +51,7 @@ namespace TPWebForms_Saucedo_Tejeda
         {
             UsuariosNegocio eliminar = new UsuariosNegocio();
             eliminar.eliminar(Convert.ToInt32(txteliminar.Text));
-            
+            Response.Redirect("Usuarios.aspx");
 
         }
 
@@ -95,6 +95,7 @@ namespace TPWebForms_Saucedo_Tejeda
             user.contrasenia = txtpass.Text;
             user.IDTipo = Convert.ToInt32(txttipe.Text);
             negocio.modificar(user);
+                Response.Redirect("Usuarios.aspx");
                 user = null;
 
             }
