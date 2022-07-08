@@ -9,8 +9,8 @@ namespace Modelo
     public class Pedido
     {
         public int ID { get; set; }
-        public List<Insumos> { get; set; }
-        public decimal total { get; set; }
-        public bool estado { get; set; }
+        public List<Insumos> Insumos { get; set; }
+        public decimal Total { get; set; }
+        public bool Estado { get; set; }
     }
 }
