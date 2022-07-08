@@ -5,7 +5,7 @@ create table pedido
     ID int not null primary key identity(1,1),
     idmesa int not null foreign key references mesas(id),
     total money DEFAULT(0),
-    estado bit default(0)
+    estado bit default(1)
 )
 
 GO
@@ -40,7 +40,7 @@ begin
 
     if @pedidos > 0
     BEGIN
-        delete from pedido where ID=@id
+        delete from pedido where ID=@idpedido
         RAISERROR('No se puede crear un pedido si existen pedidos abiertos',1,1)
     END
 
