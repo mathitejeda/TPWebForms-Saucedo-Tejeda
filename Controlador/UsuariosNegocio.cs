@@ -76,12 +76,13 @@ namespace Controlador
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetConsulta("update usuarios set IDTipo = @IDTipo, Nombre = @Nombre, Apellidos = @Apellidos, usuario = @usuarios, contrasenia = @contrasenia");
-                datos.setearParametro("IDTipo", modificar.IDTipo);
+                datos.SetConsulta("update usuarios set IDTipo = @IDTipo, Nombre = @Nombre, Apellidos = @Apellidos, usuario = @usuarios, contrasenia = @contrasenia where ID = @ID");
+                datos.setearParametro("ID", modificar.ID);
+                datos.setearParametro("@IDTipo", modificar.IDTipo);
                 datos.setearParametro("@nombre", modificar.Nombre);
-                datos.setearParametro("@Apellidos",  modificar.Apellidos);
-                datos.setearParametro("@usuarios",  modificar.usuario);
-                datos.setearParametro("@contrasenia",modificar.contrasenia);
+                datos.setearParametro("@Apellidos", modificar.Apellidos);
+                datos.setearParametro("@usuarios", modificar.usuario);
+                datos.setearParametro("@contrasenia", modificar.contrasenia);
 
                 datos.EjecutarAccion();
 
